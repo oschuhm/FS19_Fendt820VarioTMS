@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<modDesc descVersion="42">
+    <author>LSFarmers | STv-Modding | [FS19] DtP Mario | AgrarDani | Matrix 3D</author>
+    <version>1.2.0.0.1</version>
+    <title>
+        <en>Fendt 820 Vario TMS</en>
+        <de>Fendt 820 Vario TMS</de>
+    </title>
+    <description>
+        <en><![CDATA[This is the Fendt 820 Vario TMS Originally rebuilt by STv-Modding and adapted by DtP Mario, AgrarDani, Matrix 3D.
+Further information on the conversion to https://www.der-ls-treffpunkt.de]]></en>
+        <de><![CDATA[Dies ist der Fendt 820 Vario TMS Ursprünglich von STv-Modding umgebaut und angepasst von DtP Mario, AgrarDani, Matrix 3D.
+		Weitere Informationen zum umbau auf https://www.der-ls-treffpunkt.de]]></de>
+    </description>
+    <iconFilename>icon_fendt820.dds</iconFilename>
+    <multiplayer supported="true"/>
+	<vehicleTypes>
+        <type name="fendt820" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+			<specialization name="baseMaterial" />
+			<specialization name="tipOccluder" />
+			<specialization name="foliageBending" />
+			<specialization name="washable" />
+			<specialization name="wearable" />
+			<specialization name="dynamicallyLoadedParts" />
+			<specialization name="animatedVehicle" />
+			<specialization name="dashboard" />
+			<specialization name="cylindered" />
+			<specialization name="mountable" />
+			<specialization name="ikChains" />
+			<specialization name="wheels" />
+			<specialization name="crawlers" />
+			<specialization name="slopeCompensation" />
+			<specialization name="speedRotatingParts" />
+			<specialization name="enterable" />
+			<specialization name="fillUnit" />
+			<specialization name="motorized" />
+			<specialization name="drivable" />
+			<specialization name="aiVehicle" />
+			<specialization name="aiImplement" />
+			<specialization name="articulatedAxis" />
+			<specialization name="lights" />
+			<specialization name="attacherJoints" />
+			<specialization name="powerTakeOffs" />
+			<specialization name="suspensions" />
+			<specialization name="connectionHoses" />
+			<specialization name="honk" />
+			<specialization name="wipers" />
+			<specialization name="bunkerSiloCompacter" />
+			<specialization name="foldable" />
+			<specialization name="frontloaderAttacher" />
+        </type>
+    </vehicleTypes>
+	<l10n>
+		<text name="typeDesc_RUL"> <en>Rundumleuchte</en> <de>Rundumleuchte</de></text>
+		<text name="configuration_NoGPS"><en>without Trimble GPS</en><de>Ohne Trimble GPS</de></text>
+		<text name="configuration_GPS"><en>with Trimble GPS</en><de>Mit Trimble GPS</de></text>
+		<text name="configuration_NoRul"><en>without Beacon</en><de>Ohne Rundumleuchte</de></text>
+		<text name="configuration_Rul"><en>with Beacon</en><de>Mit Rundumleuchte</de></text>
+		<text name="configuration_GPSRul"><en>with GPS and Beacon</en><de>Mit GPS und Rundumleuchte</de></text>
+		<text name="configuration_NOGPSRul"><en>without GPS and Beacon</en><de>Ohne GPS und Rundumleuchte</de></text>
+	</l10n>
+    <storeItems>
+        <storeItem xmlFilename="Fendt820VarioTMS.xml" 	rootNode="vehicle"/>
+		<storeItem xmlFilename="820FrontLoader.xml" 	rootNode="vehicle"/>
+    </storeItems>
+</modDesc>

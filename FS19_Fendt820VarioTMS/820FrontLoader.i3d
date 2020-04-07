@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="820FrontLoader" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="8.1.0"/>
+  </Asset>
+
+  <Files>
+    <File fileId="10" filename="texturen/5X90_diffuse.dds"/>
+    <File fileId="11" filename="texturen/5X90_normal.dds"/>
+    <File fileId="4" filename="texturen/FL_specular.dds"/>
+    <File fileId="13" filename="texturen/logoCargo.dds"/>
+    <File fileId="14" filename="texturen/logoCargo_normal.dds"/>
+    <File fileId="9" filename="texturen/specular.dds"/>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="3" filename="$data/shared/default_normal.dds"/>
+    <File fileId="12" filename="$data/shared/default_specular.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert" materialId="4" diffuseColor="0.494118 0.494118 0.494118 1">
+    </Material>
+    <Material name="schlauch_mat" materialId="9" diffuseColor="0 0 0 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="9"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0 0 0 1"/>
+      <CustomParameter name="colorMat1" value="1 1 1 2"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="fl820_mat" materialId="8" diffuseColor="0 0 0 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.078 0.223 0.0478 0"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="fendtLogo_mat" materialId="5" alphaBlending="true" customShaderId="5">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <CustomParameter name="RDT" value="0 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+    <Material name="fl820_mat" materialId="7" diffuseColor="0.494118 0.494118 0.494118 1" customShaderId="5" customShaderVariation="colorMask">
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+      <CustomParameter name="colorMat0" value="0.8 0.55 0.05 1"/>
+      <CustomParameter name="colorMat1" value="1 0.1 0.1 1"/>
+      <CustomParameter name="colorMat2" value="0.1 1 0.1 1"/>
+      <CustomParameter name="colorMat3" value="0.1 0.1 1 1"/>
+      <CustomParameter name="colorMat4" value="1 1 0.1 1"/>
+      <CustomParameter name="colorMat5" value="0.05 0.05 0.05 1"/>
+      <CustomParameter name="colorMat6" value="1 0.1 1 1"/>
+      <CustomParameter name="colorMat7" value="0.1 1 1 1"/>
+    </Material>
+    <Material name="decals_mat" materialId="6" customShaderId="5">
+      <Texture fileId="10"/>
+      <Normalmap fileId="11"/>
+      <Glossmap fileId="12"/>
+      <CustomParameter name="RDT" value="1 1 0 0"/>
+      <CustomParameter name="dirtColor" value="0.2 0.14 0.08 0"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="820FrontLoader.i3d.shapes">
+  </Shapes>
+
+
+  <Dynamics>
+  </Dynamics>
+
+  <Scene>
+    <Shape shapeId="1" name="FL820_main_component1" rotation="-2.5 0 0" dynamic="true" compound="true" collisionMask="8194" density="0.5" clipDistance="300" nodeId="45" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true">
+      <Shape shapeId="2" name="FL820_vis" translation="0 2.287 -0.808" nodeId="46" materialIds="8" castsShadows="true" receiveShadows="true">
+        <TransformGroup name="attacherJoint" translation="1.27068e-15 -0.207 -0.133327" rotation="90 -88 -90.0001" nodeId="47"/>
+        <TransformGroup name="hydraulicMainRef" translation="-9.53463e-08 -0.399695 0.236634" rotation="168.426 0 -180" nodeId="48"/>
+        <TransformGroup name="wingArmRef" translation="-9.78517e-08 -0.147418 0.0910148" rotation="161.987 0 -180" nodeId="49"/>
+        <TransformGroup name="unten" translation="-0.570084 -0.58419 -0.28" rotation="-87.2027 -25.6331 83.5559" nodeId="50"/>
+        <Shape shapeId="3" name="schlauchverbund" translation="-0.581124 -0.386337 0.0842316" rotation="1.99275 -0.541123 -2.336" nodeId="51" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="102 50"/>
+      </Shape>
+      <Shape shapeId="4" name="arm" translation="0 2.287 -0.808" nodeId="52" materialIds="8" castsShadows="true" receiveShadows="true">
+        <Shape shapeId="5" name="hydraulicMain" translation="0 -0.549 1.178" rotation="171 0 -180" nodeId="53" materialIds="8" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="6" name="hydraulicMainPunch" translation="0 0 0.953093" nodeId="54" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        </Shape>
+        <TransformGroup name="attacherRot" translation="0 -2.217 2.202" rotation="2.5 0 0" nodeId="55">
+          <Shape shapeId="7" name="attacher" rotation="9.514 0 0" nodeId="56" materialIds="8" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="wingPartRef" translation="7.10543e-17 0.034 0.216548" nodeId="57"/>
+            <TransformGroup name="wingFrontRefFrame" translation="-4.60136e-11 0.000181653 0.00019974" rotation="-39.103 -1.3199e-05 0" nodeId="58"/>
+            <TransformGroup name="attacherJointTools_visuals" translation="2.82644e-08 0.213268 0.350103" rotation="90 -54.8827 -90" nodeId="59"/>
+            <TransformGroup name="movingPartsIn" nodeId="60">
+              <Shape shapeId="8" name="boltLeft" translation="0.02 0.051 0.142" rotation="1.70755e-06 -0 0" nodeId="61" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="8" name="boltRight" translation="-0.02 0.051 0.142" rotation="8.53774e-07 180 0" nodeId="62" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="9" name="barRight" translation="-0.212 -0.044 0.172" nodeId="63" materialIds="8" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="10" name="barLeft" translation="0.212 -0.0443461 0.171869" nodeId="64" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="movingPartsOut" visibility="false" nodeId="65">
+              <Shape shapeId="8" name="boltLeft" translation="0.114 0.051 0.142" rotation="2.56132e-06 -0 0" nodeId="66" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="8" name="boltRight" translation="-0.114 0.051 0.142" rotation="180 -5.00896e-06 180" nodeId="67" materialIds="7" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="9" name="barRight" translation="-0.212 -0.044 0.172" nodeId="68" materialIds="8" castsShadows="true" receiveShadows="true"/>
+              <Shape shapeId="10" name="barLeft" translation="0.212 -0.0443461 0.171869" nodeId="69" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            </TransformGroup>
+            <TransformGroup name="joints" nodeId="70">
+              <TransformGroup name="jointUnten" translation="-0.301277 0.0366583 0.0611588" nodeId="71"/>
+            </TransformGroup>
+          </Shape>
+        </TransformGroup>
+        <Shape shapeId="11" name="wingFront" translation="0 -2.114 2.06" rotation="-37.433 0 0" nodeId="72" materialIds="8" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="12" name="wingPart" translation="0 -0.0420595 0.311562" rotation="107.25 -0 0" nodeId="73" materialIds="8" castsShadows="true" receiveShadows="true">
+            <TransformGroup name="hydraulicFrontRef" translation="-8.33359e-08 0.0453014 -0.0654423" rotation="0 1.21165e-05 9.84795e-06" nodeId="74"/>
+          </Shape>
+          <TransformGroup name="wingPartRefFrame" translation="4.05774e-09 -0.041 0.31075" rotation="101.933 1.21165e-05 9.84795e-06" nodeId="75"/>
+        </Shape>
+        <Shape shapeId="13" name="wingMiddle" translation="0 -0.412 1.547" rotation="62.415 -0 0" nodeId="76" materialIds="8" castsShadows="true" receiveShadows="true">
+          <Shape shapeId="14" name="wingArm" translation="-8.53582e-12 0.01 0.17" rotation="47.5 180 0" nodeId="77" materialIds="8" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="15" name="decalRight" translation="0.517 0.018 1.06" scale="1 0.897659 1" nodeId="78" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="16" name="decalLeft" translation="-0.519897 0.018 1.06" nodeId="79" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+          <Shape shapeId="17" name="hydraulicFront" translation="0 0.155 -0.136" rotation="4.2 -0 0" nodeId="80" materialIds="8" castsShadows="true" receiveShadows="true">
+            <Shape shapeId="18" name="cylinderPunch" translation="0 0 1.807" nodeId="81" materialIds="8" castsShadows="true" receiveShadows="true"/>
+            <TransformGroup name="jointTargetPosPoint" translation="4.23855e-09 -0.025 0.976439" rotation="0 -1.95439 90" nodeId="82"/>
+            <TransformGroup name="jointFixPoint" translation="4.76837e-09 -0.00122629 1.47774" rotation="1.308 -6.15578e-21 -1.09908e-21" nodeId="83"/>
+            <TransformGroup name="joints" nodeId="84">
+              <TransformGroup name="jointrechtsObenGross" translation="-0.377 0.031 0.805" rotation="-62.11 -0 0" nodeId="85"/>
+              <TransformGroup name="jointrechtsObenKlein" translation="-0.377 -0.002 0.802" rotation="-62.11 0 0" nodeId="86"/>
+              <TransformGroup name="jointLinksObenGross" translation="0.375314 0.0294799 0.804196" rotation="-62.11 0 0" nodeId="87"/>
+              <TransformGroup name="jointLinksObenKlein" translation="0.377 -0.002 0.802" rotation="-62.11 0 0" nodeId="88"/>
+            </TransformGroup>
+            <Shape shapeId="19" name="right" translation="-0.492 -0.002 1.275" rotation="0.273 1.70755e-06 12.039" nodeId="89" materialIds="6" castsShadows="true" receiveShadows="true"/>
+            <Shape shapeId="20" name="left" translation="0.492742 -0.00215825 1.275" rotation="0.273 0 -12.039" nodeId="90" materialIds="6" castsShadows="true" receiveShadows="true"/>
+          </Shape>
+        </Shape>
+        <TransformGroup name="supportArm" translation="0 -2.546 1.413" nodeId="91">
+          <Shape shapeId="21" name="supportArm1" translation="8.50528e-16 0.618 0.402" rotation="-88 -0 0" nodeId="92" materialIds="8" castsShadows="true" receiveShadows="true"/>
+          <Shape shapeId="22" name="supportArm2" translation="-2.08167e-17 0.884688 0.291" rotation="-53 -0 0" nodeId="93" materialIds="8" castsShadows="true" receiveShadows="true"/>
+        </TransformGroup>
+        <TransformGroup name="wingMiddleRefFrame" translation="-1.33514e-07 -0.41204 1.5469" rotation="90.4439 0 0" nodeId="94"/>
+        <TransformGroup name="Schlauch" translation="0 -0.928 1.677" rotation="2.5 0 0" nodeId="95">
+          <Shape shapeId="23" name="schlauchUnten" translation="0 -1.396 -0.809" nodeId="96" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="107 71"/>
+          <Shape shapeId="24" name="kleinRechts" translation="0 -1.396 -0.809" nodeId="97" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="86 104"/>
+          <Shape shapeId="25" name="kleinLinks" translation="0 -1.396 -0.809" nodeId="98" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="88 106"/>
+          <Shape shapeId="26" name="grossLinks" translation="0 -1.396 -0.809" nodeId="99" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="87 105"/>
+          <Shape shapeId="27" name="grossRechts" translation="0 -1.396 -0.809" nodeId="100" materialIds="9" castsShadows="true" receiveShadows="true" skinBindNodeIds="85 103"/>
+          <TransformGroup name="joints" translation="0.02 0 0" nodeId="101">
+            <TransformGroup name="paketOben" translation="-0.58918 0.718073 -1.173" nodeId="102"/>
+            <TransformGroup name="jointrechtsUntenGross" translation="-0.392 -0.556 0.124" rotation="-90 -17.204 90" nodeId="103"/>
+            <TransformGroup name="jointrechtsUntenKlein" translation="-0.393 -0.538 0.172" rotation="-90 -10.1176 90" nodeId="104"/>
+            <TransformGroup name="jointLinksUntenGross" translation="0.352957 -0.556 0.124" rotation="-90 -17.204 90" nodeId="105"/>
+            <TransformGroup name="jointLinksUntenKlein" translation="0.350764 -0.538 0.172" rotation="-90 -10.1176 90" nodeId="106"/>
+            <TransformGroup name="jointOben" translation="-0.365098 -0.957512 0.316998" rotation="90 -49.7962 -90" nodeId="107"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape shapeId="28" name="Logo" translation="-0.0263517 -1.23851 1.61426" rotation="69.0795 -0 0" scale="0.86 1 1" nodeId="108" materialIds="5" castsShadows="true" receiveShadows="true"/>
+      </Shape>
+      <TransformGroup name="attacherRootDummy" translation="7.10543e-17 2.28725 -0.807507" nodeId="109">
+        <TransformGroup name="attacherJointDummy" translation="9.53674e-08 -1.30833e-15 3.57777e-16" rotation="0 -90 0" nodeId="110">
+          <TransformGroup name="wingArmRefDummy" translation="0.0908797 -0.14779 9.62377e-08" rotation="-18.0128 -90 0" nodeId="111"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="armDummy" translation="9.53674e-08 2.28673 -0.807" nodeId="112">
+        <TransformGroup name="attacherRotDummy" translation="-9.53674e-08 -2.21567 2.20182" nodeId="113">
+          <TransformGroup name="attacherDummy" translation="3.38813e-23 1.98952e-15 8.52651e-16" nodeId="114">
+            <TransformGroup name="attacherJointTools" translation="1.51995e-09 0.161081 0.345444" rotation="90 -52.3827 -90" nodeId="115"/>
+          </TransformGroup>
+        </TransformGroup>
+        <Shape shapeId="29" name="supportCol" translation="0 -1.923 1.95" visibility="false" compoundChild="true" collisionMask="2105410" density="0.5" nodeId="116" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="30" name="arm_col3" translation="0 -1.322 1.757" rotation="17.873 0 0" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="117" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="31" name="arm_col4" translation="0 -1.322 1.757" rotation="17.873 0 0" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="118" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="32" name="arm_col2" translation="-9.53674e-08 -2.39928 0.941204" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="119" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+        <Shape shapeId="33" name="arm_col5" translation="-9.53674e-08 -2.39928 0.941204" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="120" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      </TransformGroup>
+      <Shape shapeId="34" name="arm_col1" translation="0.466 1.91349 -0.705513" rotation="27.3169 0 0" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="121" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+      <Shape shapeId="34" name="arm_col6" translation="-0.466 1.91349 -0.705513" rotation="27.3169 0 0" visibility="false" compoundChild="true" collisionMask="8194" density="0.001" nodeId="122" materialIds="4" castsShadows="true" receiveShadows="true" nonRenderable="true"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="46">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="50">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="53">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="54">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="71">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="72">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="73">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="76">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="77">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="80">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="81">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="85">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="86">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="87">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="88">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="92">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="93">
+      <Attribute name="currentUVSet" type="string" value="map1"/>
+    </UserAttribute>
+    <UserAttribute nodeId="102">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="103">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="104">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="105">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="106">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="107">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

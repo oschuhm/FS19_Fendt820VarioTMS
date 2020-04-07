@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds>
+    <motorStart template="DEFAULT_MOTOR_START" file="sounds/start.wav" linkNode="0>"/>
+    <motorStop template="DEFAULT_MOTOR_STOP" file="sounds/stop.wav" linkNode="0>"/>
+
+    <motor template="DEFAULT_MOTOR_IDLE" file="sounds/idle.wav" linkNode="0>"/>
+    <motor template="DEFAULT_MOTOR_OFFLOAD_RUN" file="sounds/run.wav" linkNode="0>"/>
+    <motor template="DEFAULT_MOTOR_ONLOAD_RUN" file="sounds/load.wav" linkNode="0>"/>
+
+    <gearbox template="DEFAULT_GEARBOX" file="sounds/transmission.wav" linkNode="0>"/>
+
+    <airCompressorStart template="BRAKE_COMPRESSOR_START" file="sounds/compressor_idle.wav" linkNode="0>"/>
+    <airCompressorStop template="BRAKE_COMPRESSOR_STOP" linkNode="0>"/>
+    <airCompressorRun template="BRAKE_COMPRESSOR_RUN" linkNode="0>"/>
+    <compressedAir template="BRAKE_SMALL" linkNode="0>"/>
+    <airRelease template="BRAKE_REGULATOR_VALVE" linkNode="0>"/>
+</sounds>
