@@ -561,8 +561,8 @@
 	
     <attacherJoints comboDuration="2">
         <attacherJoint node="0>5|0|1|1|0|0" upperRotationOffset="0.82" moveTime="2.5" comboTime="1">
-            <distanceToGround lower="0.35" upper="1.22"/>
-            <rotationNode node="0>5|0|1|1" upperRotation="34 0 0" lowerRotation="-21 0 0"/>
+            <distanceToGround lower="0.35" upper="1.30"/>
+            <rotationNode node="0>5|0|1|1" upperRotation="44 0 0" lowerRotation="-21 0 0"/>
             <rotationNode2 node="0>5|0|1|1|0"/>
             <bottomArm rotationNode="0>5|0|1|2" translationNode="0>5|0|1|2|0" referenceNode="0>5|0|1|2|0|0" zScale="-1" startRotation="-8 0 0"/>
             <topArm rotationNode="0>5|0|1|3" translationNode="0>5|0|1|3|1" referenceNode="0>5|0|1|3|1|0|0" zScale="-1"/>
@@ -687,6 +687,8 @@
 			<defaultLight shaderNode="kabineDecalLight" 	lightTypes="0 3" 	intensity="0.1"/>
 			<defaultLight shaderNode="cabinLights" 			lightTypes="0 3" 	intensity="5"/>
 			<defaultLight shaderNode="trimbleMonitoLight" 	lightTypes="0 3" 	intensity="0.3"/>
+			<defaultLight shaderNode="fussmatteLogo" lightTypes="0" intensity="0.15"/>
+            <defaultLight shaderNode="fussmatteRand" lightTypes="0" intensity="0.15"/>
 			
         </defaultLights>
 
@@ -966,6 +968,7 @@
 		<i3dMapping id="side" node="0>5|0|1|6" />
 		<i3dMapping id="mirror_left" node="0>5|1|0|0|0" />
 		<i3dMapping id="mirror_right" node="0>5|1|0|1|0" />
+		<i3dMapping id="mirror_inside" node="0>5|1|0|2|0" />
 		<i3dMapping id="Dachluke" node="0>5|1|2|1" />
 		<i3dMapping id="Heckfenster" node="0>5|1|2|2" />
 		<i3dMapping id="TuerLinks" node="0>5|1|2|3" />
@@ -1076,10 +1079,14 @@
 		<i3dMapping id="rearWindowInside" 	node="0>5|1|2|2|3" />
 		<i3dMapping id="rearWindowLeftCylinder" 	node="0>5|1|2|2|4" />
 		<i3dMapping id="rearWindowLeftCylinderInside" 	node="0>5|1|2|7" />
+		<i3dMapping id="rearWindowRightCylinder" 	node="0>5|1|2|2|1" />
+		<i3dMapping id="rearWindowRightCylinderInside" 	node="0>5|1|2|8" />
 		<i3dMapping id="doorLeft" 	node="0>5|1|2|3" />
 		<i3dMapping id="simpleIC_Door_Inside" 	node="0>5|1|2|3|1" />
 		<i3dMapping id="simpleIC_Door_Outside" 	node="0>5|1|2|3|2" />
-		
+		<!-- Fussmatte -->
+		<i3dMapping id="fussmatteLogo" 	node="0>5|1|15|0" />
+		<i3dMapping id="fussmatteRand" 	node="0>5|1|15|1" />
     </i3dMappings>
 	
 	<dashboard>
@@ -1147,6 +1154,7 @@
         <mirrors>
             <mirror node="mirror_left" 	prio="1"/>
             <mirror node="mirror_right" prio="1"/>
+			<mirror node="mirror_inside" prio="1"/>
         </mirrors>
 		
 		<dashboards>
@@ -1279,7 +1287,7 @@
         </animation>
 		
 		<animation name="schluesselAnim">
-            <part node="schluessel" startTime="0.0" endTime="0.5" startRot="0 0 0" endRot="40 0 0"/>
+            <part node="schluessel" startTime="0.0" endTime="0.5" startRot="-40 0 0" endRot="40 0 0"/>
 		</animation>
 		
 		<animation name="wiperFrontAnimation">
@@ -1331,16 +1339,17 @@
     </animations>
 	
 	<simpleIC outsideInteractionTrigger="playerTrigger" >
-		<animation animationName="openDoor" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="1.0" >
+		<animation animationName="openDoor" animationSpeed="1" sharedAnimation="false" soundVolumeIncreasePercentage="10.0" >
 			<outsideTrigger triggerPoint="simpleIC_Door_Outside" triggerPointSize="0.04" />
 			<insideTrigger triggerPoint="simpleIC_Door_Inside" triggerPointSize="0.04" />
 		</animation>
-		<animation animationName="openRearWindow" animationSpeed="1.5" sharedAnimation="false" soundVolumeIncreasePercentage="1.0" >
+		<animation animationName="openRearWindow" animationSpeed="1.5" sharedAnimation="false" soundVolumeIncreasePercentage="10.0" >
 			<insideTrigger triggerPoint="rearWindowInside" triggerPointSize="0.04" />
 		</animation>	
 
 	    <cylinderAnimations>
 		    <cylinder node1="rearWindowLeftCylinder" node2="rearWindowLeftCylinderInside" />
+			<cylinder node1="rearWindowRightCylinder" node2="rearWindowRightCylinderInside" />
 	    </cylinderAnimations>
 		
 	</simpleIC>
