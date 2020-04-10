@@ -841,7 +841,7 @@
 	<i3dMappings>
 		<i3dMapping id="exhaustParticle" 	node="0>4" />
         <i3dMapping id="wiperFront" 	node="0>5|1|2|5|3" />
-        <i3dMapping id="wiperBack" 		node="0>5|1|2|2|3" />
+        <i3dMapping id="wiperBack" 		node="0>5|1|2|2|2" />
 		<i3dMapping id="frontloaderJoystick" node="0>5|1|3|3" />
         <i3dMapping id="playerRightHandTargetFrontloader" node="0>5|1|3|3|0" />
         <i3dMapping id="playerLeftFootTarget" node="0>5|1|11|0" />
@@ -1045,9 +1045,9 @@
         <i3dMapping id="brakePedal" node="0>5|1|12|1|0" />
         <i3dMapping id="playerRightFootTargetBrake" node="0>5|1|12|1|0|0" />
 		<i3dMapping id="heckfenster_cylinder1" node="0>5|1|2|2|1" />
-		<i3dMapping id="heckfenster_cylinder1Punch" node="0>5|1|2|2|1|0" />
+		<!--<i3dMapping id="heckfenster_cylinder1Punch" node="0>5|1|2|2|1|0" />-->
 		<i3dMapping id="heckfenster_cylinder2" node="0>5|1|2|2|2" />
-		<i3dMapping id="heckfenster_cylinder2Punch" node="0>5|1|2|2|2|0" />
+		<!--<i3dMapping id="heckfenster_cylinder2Punch" node="0>5|1|2|2|2|0" />-->
 		<i3dMapping id="schluessel" node="0>5|1|4|8" />
 		<i3dMapping id="rulRot" node="0>5|1|5|0" />
 		<i3dMapping id="tachoLights" 		node="0>5|1|4|7|0" />
@@ -1084,6 +1084,12 @@
 		<i3dMapping id="doorLeft" 	node="0>5|1|2|3" />
 		<i3dMapping id="simpleIC_Door_Inside" 	node="0>5|1|2|3|1" />
 		<i3dMapping id="simpleIC_Door_Outside" 	node="0>5|1|2|3|2" />
+		<!-- simpleIC Hydraulics -->
+		<i3dMapping id="simpleIC_lowerBackHydraulic" 	node="0>5|4" />
+		<i3dMapping id="simpleIC_upperBackHydraulic" 	node="0>5|3" />
+		<i3dMapping id="simpleIC_activateBackPTO" 	node="0>5|5" />
+		<i3dMapping id="simpleIC_lowerFrontHydraulic" 	node="0>5|7" />
+		<i3dMapping id="simpleIC_upperFrontHydraulic" 	node="0>5|6" />
 		<!-- Fussmatte -->
 		<i3dMapping id="fussmatteLogo" 	node="0>5|1|15|0" />
 		<i3dMapping id="fussmatteRand" 	node="0>5|1|15|1" />
@@ -1345,7 +1351,33 @@
 		</animation>
 		<animation animationName="openRearWindow" animationSpeed="1.5" sharedAnimation="false" soundVolumeIncreasePercentage="10.0" >
 			<insideTrigger triggerPoint="rearWindowInside" triggerPointSize="0.04" />
-		</animation>	
+		</animation>
+		
+		<!-- Available functions in simpleIC_LSF -->
+		<!--
+			toogleBackHydraulic
+			upperBackHydraulic
+			lowerBackHydraulic
+			activateBack
+			toogleFrontHydraulic
+			upperFrontHydraulic
+			lowerFrontHydraulic
+		-->
+		<animation animationName="lowerBackHydraulic">
+			<outsideTrigger triggerPoint="simpleIC_lowerBackHydraulic" triggerPointSize="0.01" />
+		</animation>
+		<animation animationName="upperBackHydraulic">
+			<outsideTrigger triggerPoint="simpleIC_upperBackHydraulic" triggerPointSize="0.01" />
+		</animation>
+		<animation animationName="activateBack">
+			<outsideTrigger triggerPoint="simpleIC_activateBackPTO" triggerPointSize="0.01" />
+		</animation>
+		<animation animationName="lowerFrontHydraulic">
+			<outsideTrigger triggerPoint="simpleIC_lowerFrontHydraulic" triggerPointSize="0.01" />
+		</animation>
+		<animation animationName="upperFrontHydraulic">
+			<outsideTrigger triggerPoint="simpleIC_upperFrontHydraulic" triggerPointSize="0.01" />
+		</animation>
 
 	    <cylinderAnimations>
 		    <cylinder node1="rearWindowLeftCylinder" node2="rearWindowLeftCylinderInside" />
@@ -1409,13 +1441,15 @@
             <movingPart node="1>0|0|2" referencePoint="1>2|0" referenceFrame="1>2|0" isActiveDirty="true" scaleZ="true" playSound="false"/>
             <movingPart node="1>1|0|2" referencePoint="1>2|1" referenceFrame="1>2|1" isActiveDirty="true" scaleZ="true" playSound="false"/>
             
+			<!--
 			<movingPart node="heckfenster_cylinder1" referencePoint="0>5|1|2|0|0" referenceFrame="0>5|1|2|2|0" isActiveDirty="false">
                 <translatingPart node="heckfenster_cylinder1Punch"/>
             </movingPart>
             <movingPart node="heckfenster_cylinder2" referencePoint="0>5|1|2|0|1" referenceFrame="0>5|1|2|0|1" isActiveDirty="false">
                 <translatingPart node="heckfenster_cylinder2Punch"/>
             </movingPart>
-            
+            -->
+			
 			<movingPart node="0>5|1|2|1|0" referencePoint="0>5|1|2|0|2" referenceFrame="0>5|1|2|0|2" isActiveDirty="false">
                 <translatingPart node="0>5|1|2|1|0|0"/>
             </movingPart>
