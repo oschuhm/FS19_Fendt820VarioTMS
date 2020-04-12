@@ -27,7 +27,7 @@
     </storeData>
 	
     <base>
-		<typeDesc>$l10n_typeDesc_RUL</typeDesc>
+		<typeDesc>$l10n_typeDesc_tractor</typeDesc>
         <filename>Fendt820VarioTMS.i3d</filename>
         <size width="3.5" length="7"/>
         <components count="5">
